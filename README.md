@@ -1,7 +1,7 @@
 # 1secmail
 Module to generating temporary emails
 
-```
+```perl
 #!/usr/bin/perl
 
 use warnings;
