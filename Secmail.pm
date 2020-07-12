@@ -14,7 +14,7 @@ sub new
 
 	my $self = 
 	{
-		_url 	=> 'https://www.1secmail.com',
+		_url	=> 'https://www.1secmail.com',
 		_ua		=> 'Mozilla/5.0',
 	};
 
