@@ -10,12 +10,12 @@ use JSON::MaybeXS;
 
 sub new
 {
-	my $class 	= shift(@_);
+	my $class = shift( @_ );
 
 	my $self = 
 	{
 		_url	=> 'https://www.1secmail.com',
-		_ua		=> 'Mozilla/5.0',
+		_ua	=> 'Mozilla/5.0',
 	};
 
 	bless $self => $class;
@@ -25,7 +25,7 @@ sub new
 
 sub proxy
 {
-	my $self		= shift(@_);
+	my $self = shift( @_ );
 
 	$self->{_proxyhost} = $_[0];
 	$self->{_proxyport} = $_[1];
@@ -33,14 +33,14 @@ sub proxy
 
 sub ua
 {
-	my $self		= shift(@_);
+	my $self = shift( @_ );
 
 	$self->{_ua} = $_[0];
 }
 
 sub checkemail
 {
-	my $self	= shift(@_);
+	my $self = shift(@_);
 
 	my $json;
 
@@ -89,7 +89,7 @@ sub checkemail
 
 sub bodymessage
 {
-	my $self	= shift(@_);
+	my $self = shift( @_ );
 
 	$self->{_browser}->get
 	( 
@@ -113,7 +113,6 @@ sub bodymessage
 		die "Request message problem";
 	}
 	return undef;
-
 }
 
 1;
